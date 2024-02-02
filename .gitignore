@@ -3,6 +3,7 @@ venv/
 .cache
 config.ini
 main.pyw
+*.lnk
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
