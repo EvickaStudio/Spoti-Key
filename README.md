@@ -19,9 +19,9 @@ Details from [spotipy](https://spotipy.readthedocs.io/en/2.22.1/#)
 
 3. Install the requirements using pip:
 
-```sh
-pip install -r requirements.txt
-```
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 4. Fill out the `config.ini` file with your Spotify app credentials:
 
@@ -45,3 +45,24 @@ python main.py
 To disable the popping up of the console, rename the `main.py` to `main.pyw`.
 
 This script uses the `SpotifyClient` class from the `spotify_client` module and reads the configuration from the `config.ini` file using the `Config` class from the `config` module. It then adds the currently playing song on Spotify to the user's liked songs.
+
+## Compiling
+
+You can compile this skript using `pyinstaller`:
+
+1. Install PyInstaller:
+
+   ```sh
+   pip install pyinstaller
+   ```
+
+2. Run the following command:
+
+   `--onfile` Only one file.
+   `--noconsole` No console window.
+
+   ```sh
+   pyinstaller --onefile --noconsole main.py
+   ```
+
+This will create a single executable file in the `dist` directory.
