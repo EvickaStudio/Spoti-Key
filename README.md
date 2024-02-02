@@ -66,3 +66,7 @@ You can compile this skript using `pyinstaller`:
    ```
 
 This will create a single executable file in the `dist` directory.
+
+> [!NOTE]
+> The implementation of this feature as a hotkey within your hardware/software is up to you.
+> I compiled it into an .exe file because Logitech Options does not support .py or .lnk files.
