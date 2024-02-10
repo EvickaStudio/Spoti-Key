@@ -2,6 +2,7 @@ import spotipy
 import logging
 from spotipy.oauth2 import SpotifyOAuth
 
+
 class SpotifyClient:
     """
     A class representing a Spotify client.
@@ -54,6 +55,21 @@ class SpotifyClient:
         track_artists = [artist["name"] for artist in current_song["item"]["artists"]]
         track_id = current_song["item"]["id"]
 
-        logging.info(f"Adding '{track_name}' by {', '.join(track_artists)}' to liked songs...")
+        logging.info(
+            f"Adding '{track_name}' by {', '.join(track_artists)}' to liked songs..."
+        )
         self.spotify.current_user_saved_tracks_add([track_id])
         logging.info("Done!")
+
+    # For testing purposes
+    def get_song_info(self, song_id):
+        """
+        Get information about a song by its ID.
+
+        Args:
+            song_id (str): The ID of the song.
+
+        Returns:
+            dict: A dictionary containing information about the song.
+        """
+        return self.spotify.track(song_id)
