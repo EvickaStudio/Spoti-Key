@@ -56,7 +56,7 @@ class SpotifyClient:
         track_id = current_song["item"]["id"]
 
         logging.info(
-            f"Adding '{track_name}' by {', '.join(track_artists)}' to liked songs..."
+            f"Adding '{track_name}' by '{', '.join(track_artists)}' to liked songs..."
         )
         self.spotify.current_user_saved_tracks_add([track_id])
         logging.info("Done!")
