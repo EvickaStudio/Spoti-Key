@@ -40,6 +40,9 @@ Run the `main.py` script:
 
 ```sh
 python main.py
+
+# INFO:root:Adding 'The Beginning' by 'Flawed Mangoes' to liked songs...
+# INFO:root:Done!
 ```
 
 To disable the popping up of the console, rename the `main.py` to `main.pyw`.
